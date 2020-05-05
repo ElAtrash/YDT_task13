@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change colors on click</title>
+
+  <script type="text/javascript">
+    function colorGenerator() {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    function randomColor(id) {
+      document.getElementById(id).style.color = colorGenerator();
+    }
+
+    function backgroundColor(color) {
+      document.body.style.background = colorGenerator();
+    }
+  </script>
+</head>
+<body>
+  <div id="random-text-color">
+    Cras posuere aliquam neque, non vulputate tellus pellentesque ac. Maecenas tortor nibh, finibus eget efficitur elementum, imperdiet sit amet velit. Sed in tincidunt leo. In mattis auctor venenatis. Curabitur gravida nunc lacus, in condimentum lectus semper sed. Proin gravida auctor pharetra. Phasellus imperdiet risus vel leo scelerisque pretium. Nullam in diam vel dolor suscipit rutrum a non massa. Ut nulla est, varius in porttitor et, aliquam pellentesque libero. Cras suscipit tellus in justo ultrices fermentum. Nunc eleifend dapibus dolor, ac ultrices ligula vulputate dapibus. Aenean odio diam, tempor sit amet eleifend non, mattis et dui. Nam in nibh imperdiet, tempor eros quis, ullamcorper lectus. Aenean commodo lorem eros, nec aliquet nulla lacinia a. Integer nec nulla quam.
+  </div>
+
+  <button onclick="randomColor('random-text-color')"> I'm gonna change the text color</button>
+  <button id="bg", onclick="backgroundColor('bg')">And I'm for the background color</button>
+</body>
+</html>
